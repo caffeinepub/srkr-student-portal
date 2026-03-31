@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === SRKR Neon Cosmos Palette === */
+    --navy: 13% 0.09 300;
+    --gold: 72% 0.19 42;
+    --cyan: 82% 0.17 200;
+    --violet: 58% 0.24 295;
+    --rose: 70% 0.18 355;
+
+    --background: 97% 0.005 295;
+    --foreground: 14% 0.05 295;
+    --card: 100% 0 0;
+    --card-foreground: 14% 0.05 295;
+    --popover: 100% 0 0;
+    --popover-foreground: 14% 0.05 295;
+    --primary: 58% 0.24 295;
+    --primary-foreground: 100% 0 0;
+    --secondary: 95% 0.008 295;
+    --secondary-foreground: 14% 0.05 295;
+    --muted: 95% 0.008 295;
+    --muted-foreground: 52% 0.04 295;
+    --accent: 72% 0.19 42;
+    --accent-foreground: 100% 0 0;
+    --destructive: 50% 0.22 27;
+    --destructive-foreground: 100% 0 0;
+    --border: 90% 0.014 295;
+    --input: 90% 0.014 295;
+    --ring: 58% 0.24 295;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Figtree", system-ui, sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  }
+}
+
+/* ===================== KEYFRAMES ===================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-0.5deg);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px oklch(58% 0.24 295 / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px oklch(58% 0.24 295 / 0.6), 0 0 60px
+      oklch(82% 0.17 200 / 0.2);
+  }
+}
+
+/* ===================== HERO ===================== */
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(13% 0.09 300) 0%,
+    oklch(18% 0.13 295) 30%,
+    oklch(22% 0.15 280) 60%,
+    oklch(16% 0.11 310) 100%
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse 80% 60% at 70% 40%,
+      oklch(58% 0.24 295 / 0.15) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 20% 80%,
+      oklch(82% 0.17 200 / 0.08) 0%,
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+.hero-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===================== SHIMMER TEXT ===================== */
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    oklch(72% 0.19 42) 0%,
+    oklch(82% 0.17 200) 40%,
+    oklch(72% 0.19 42) 60%,
+    oklch(85% 0.16 55) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 1.8s linear infinite;
+}
+
+/* ===================== CARDS ===================== */
+
+.card-shadow {
+  box-shadow: 0 4px 16px oklch(14% 0.05 295 / 0.1);
+}
+
+.card-glow-hover {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-glow-hover:hover {
+  box-shadow: 0 8px 32px oklch(58% 0.24 295 / 0.22), 0 2px 8px
+    oklch(82% 0.17 200 / 0.12);
+  transform: translateY(-4px);
+}
+
+.card-top-strip {
+  position: relative;
+  overflow: hidden;
+}
+.card-top-strip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, oklch(58% 0.24 295), oklch(82% 0.17 200));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.card-top-strip:hover::before {
+  transform: scaleX(1);
+}
+
+/* ===================== GRADIENT LINE ===================== */
+
+.gradient-divider {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    oklch(58% 0.24 295) 0%,
+    oklch(82% 0.17 200) 40%,
+    oklch(72% 0.19 42) 70%,
+    oklch(70% 0.18 355) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 2.5s linear infinite;
+  border-radius: 2px;
+}
+
+/* ===================== PULSE RING ===================== */
+
+.pulse-ring-dot {
+  position: relative;
+}
+.pulse-ring-dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: oklch(82% 0.17 200);
+  animation: pulse-ring 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* ===================== GLOW ANIMATION ===================== */
+
+.glow-animate {
+  animation: glow-pulse 1.8s ease-in-out infinite;
+}
+
+/* ===================== SCROLLBAR ===================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(95% 0.008 295);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(58% 0.24 295 / 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(58% 0.24 295 / 0.8);
+}
+
+/* ===================== STATS BAR ===================== */
+
+.stats-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(13% 0.09 300) 0%,
+    oklch(17% 0.12 290) 50%,
+    oklch(13% 0.09 310) 100%
+  );
+}
+
+/* ===================== FOOTER ===================== */
+
+.footer-gradient {
+  background: linear-gradient(
+    180deg,
+    oklch(13% 0.09 300) 0%,
+    oklch(10% 0.07 300) 100%
+  );
+}
