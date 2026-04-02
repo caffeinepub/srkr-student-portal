@@ -46,8 +46,8 @@ const FEATURE_CARDS: FeatureCard[] = [
     title: "Timetable",
     description: "Access your class schedules and timetables",
     icon: <Calendar className="w-6 h-6 text-white" />,
-    iconGradient: "from-[oklch(58%_0.24_295)] to-[oklch(72%_0.2_270)]",
-    accentColor: "oklch(58%_0.24_295)",
+    iconGradient: "from-[oklch(40%_0.13_220)] to-[oklch(50%_0.16_220)]",
+    accentColor: "oklch(40%_0.13_220)",
     link: "https://srkrec.edu.in/timetables.php",
     buttonLabel: "View Timetable",
   },
@@ -56,8 +56,8 @@ const FEATURE_CARDS: FeatureCard[] = [
     title: "Exam Results",
     description: "Check your exam results and academic performance",
     icon: <GraduationCap className="w-6 h-6 text-white" />,
-    iconGradient: "from-[oklch(55%_0.25_230)] to-[oklch(70%_0.2_210)]",
-    accentColor: "oklch(55%_0.25_230)",
+    iconGradient: "from-[oklch(40%_0.13_220)] to-[oklch(50%_0.15_215)]",
+    accentColor: "oklch(40%_0.13_220)",
     link: "https://srkrexams.in/login.aspx",
     buttonLabel: "Check Results",
   },
@@ -67,8 +67,8 @@ const FEATURE_CARDS: FeatureCard[] = [
     description:
       "Explore placement drives, internship opportunities and updates",
     icon: <Briefcase className="w-6 h-6 text-white" />,
-    iconGradient: "from-[oklch(68%_0.2_42)] to-[oklch(75%_0.18_55)]",
-    accentColor: "oklch(68%_0.2_42)",
+    iconGradient: "from-[oklch(64%_0.18_42)] to-[oklch(70%_0.17_55)]",
+    accentColor: "oklch(64%_0.18_42)",
     link: "https://srkrec.edu.in/placements_home.php",
     buttonLabel: "Explore Placements",
   },
@@ -77,8 +77,8 @@ const FEATURE_CARDS: FeatureCard[] = [
     title: "Event Info",
     description: "Stay updated with college events and activities",
     icon: <Star className="w-6 h-6 text-white" />,
-    iconGradient: "from-[oklch(70%_0.18_355)] to-[oklch(62%_0.22_330)]",
-    accentColor: "oklch(70%_0.18_355)",
+    iconGradient: "from-[oklch(64%_0.18_42)] to-[oklch(55%_0.15_220)]",
+    accentColor: "oklch(64%_0.18_42)",
     link: "#",
     buttonLabel: "Explore Events",
   },
@@ -87,8 +87,8 @@ const FEATURE_CARDS: FeatureCard[] = [
     title: "Fee Payment",
     description: "Pay your college fees quickly and securely online",
     icon: <CreditCard className="w-6 h-6 text-white" />,
-    iconGradient: "from-[oklch(65%_0.22_160)] to-[oklch(74%_0.18_175)]",
-    accentColor: "oklch(65%_0.22_160)",
+    iconGradient: "from-[oklch(40%_0.13_220)] to-[oklch(50%_0.14_220)]",
+    accentColor: "oklch(40%_0.13_220)",
     link: "https://srkrec.edu.in/fee_payment.php",
     buttonLabel: "Pay Fees",
   },
@@ -97,8 +97,8 @@ const FEATURE_CARDS: FeatureCard[] = [
     title: "Grievance Portal",
     description: "Submit and track your grievances and complaints",
     icon: <Shield className="w-6 h-6 text-white" />,
-    iconGradient: "from-[oklch(82%_0.17_200)] to-[oklch(68%_0.22_215)]",
-    accentColor: "oklch(82%_0.17_200)",
+    iconGradient: "from-[oklch(55%_0.14_215)] to-[oklch(45%_0.13_220)]",
+    accentColor: "oklch(55%_0.14_215)",
     link: "https://srkrec.edu.in/grievance/index.php",
     buttonLabel: "Submit Grievance",
   },
@@ -110,12 +110,12 @@ function Header({ onEvents }: { onEvents?: () => void }) {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white text-black shadow-lg border-b border-gray-200">
       {/* Glow line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[oklch(58%_0.24_295)] to-transparent opacity-80" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[oklch(40%_0.13_220)] to-transparent opacity-80" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[oklch(58%_0.24_295)] to-[oklch(82%_0.17_200)] flex items-center justify-center flex-shrink-0 shadow-glow">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[oklch(40%_0.13_220)] to-[oklch(55%_0.14_215)] flex items-center justify-center flex-shrink-0 shadow-glow">
               <span className="text-xs font-bold text-white tracking-tight">
                 SRKR
               </span>
@@ -252,8 +252,8 @@ function HeroSection() {
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-sm mb-6"
             >
               <span className="relative flex w-2.5 h-2.5">
-                <span className="pulse-ring-dot absolute inline-flex w-full h-full rounded-full bg-[oklch(82%_0.17_200)] opacity-75" />
-                <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-[oklch(82%_0.17_200)]" />
+                <span className="pulse-ring-dot absolute inline-flex w-full h-full rounded-full bg-[oklch(55%_0.14_215)] opacity-75" />
+                <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-[oklch(55%_0.14_215)]" />
               </span>
               <span className="font-medium">
                 NAAC A+ Accredited Institution
@@ -288,7 +288,7 @@ function HeroSection() {
             >
               <Button
                 asChild
-                className="bg-gradient-to-r from-[oklch(58%_0.24_295)] to-[oklch(65%_0.22_270)] hover:from-[oklch(62%_0.24_295)] hover:to-[oklch(70%_0.22_270)] text-white font-semibold px-8 py-3 rounded-lg shadow-glow transition-all duration-150 border-0"
+                className="bg-gradient-to-r from-[oklch(40%_0.13_220)] to-[oklch(50%_0.16_220)] hover:from-[oklch(45%_0.13_220)] hover:to-[oklch(55%_0.16_220)] text-white font-semibold px-8 py-3 rounded-lg shadow-glow transition-all duration-150 border-0"
                 data-ocid="hero.explore_portal.button"
               >
                 <a href="#features">
@@ -321,7 +321,7 @@ function HeroSection() {
             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
           >
             <div className="relative w-full max-w-md">
-              <div className="absolute inset-0 bg-gradient-to-br from-[oklch(58%_0.24_295)]/30 to-[oklch(82%_0.17_200)]/20 rounded-2xl blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[oklch(40%_0.13_220)]/30 to-[oklch(55%_0.14_215)]/20 rounded-2xl blur-3xl scale-110" />
               <img
                 src="/assets/generated/srkr-hero-illustration.dim_600x400.png"
                 alt="SRKR Campus"
@@ -473,22 +473,22 @@ function StatsBar() {
     {
       label: "Years of Excellence",
       value: "45+",
-      gradient: "from-[oklch(58%_0.24_295)] to-[oklch(72%_0.2_270)]",
+      gradient: "from-[oklch(55%_0.14_215)] to-[oklch(64%_0.18_42)]",
     },
     {
       label: "NAAC Grade",
       value: "A+",
-      gradient: "from-[oklch(82%_0.17_200)] to-[oklch(68%_0.22_215)]",
+      gradient: "from-[oklch(55%_0.14_215)] to-[oklch(45%_0.13_220)]",
     },
     {
       label: "Placement Offers 2025",
       value: "1800+",
-      gradient: "from-[oklch(72%_0.19_42)] to-[oklch(76%_0.18_55)]",
+      gradient: "from-[oklch(64%_0.18_42)] to-[oklch(70%_0.17_55)]",
     },
     {
       label: "NBA Accredited Programs",
       value: "6",
-      gradient: "from-[oklch(70%_0.18_355)] to-[oklch(62%_0.22_330)]",
+      gradient: "from-[oklch(64%_0.18_42)] to-[oklch(55%_0.15_220)]",
     },
   ];
 
@@ -527,7 +527,7 @@ function Footer() {
           {/* College Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[oklch(58%_0.24_295)] to-[oklch(82%_0.17_200)] flex items-center justify-center shadow-glow">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[oklch(40%_0.13_220)] to-[oklch(55%_0.14_215)] flex items-center justify-center shadow-glow">
                 <span className="text-xs font-bold text-white">SRKR</span>
               </div>
               <div>
@@ -545,7 +545,7 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-sm mb-4 font-display bg-gradient-to-r from-[oklch(72%_0.19_42)] to-[oklch(82%_0.17_200)] bg-clip-text text-transparent">
+            <h4 className="font-bold text-sm mb-4 font-display bg-gradient-to-r from-[oklch(64%_0.18_42)] to-[oklch(55%_0.14_215)] bg-clip-text text-transparent">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -568,20 +568,20 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-sm mb-4 font-display bg-gradient-to-r from-[oklch(72%_0.19_42)] to-[oklch(82%_0.17_200)] bg-clip-text text-transparent">
+            <h4 className="font-bold text-sm mb-4 font-display bg-gradient-to-r from-[oklch(64%_0.18_42)] to-[oklch(55%_0.14_215)] bg-clip-text text-transparent">
               Contact
             </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-white/70">
-                <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-[oklch(72%_0.19_42)]" />
+                <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-[oklch(64%_0.18_42)]" />
                 <span>SRKR Marg, China Amiram, Bhimavaram, A.P - 534204</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/70">
-                <Phone className="w-4 h-4 shrink-0 text-[oklch(82%_0.17_200)]" />
+                <Phone className="w-4 h-4 shrink-0 text-[oklch(55%_0.14_215)]" />
                 <span>+91 (8816) 223332</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/70">
-                <Globe className="w-4 h-4 shrink-0 text-[oklch(72%_0.19_42)]" />
+                <Globe className="w-4 h-4 shrink-0 text-[oklch(64%_0.18_42)]" />
                 <a
                   href="https://srkrec.edu.in"
                   target="_blank"
@@ -602,7 +602,7 @@ function Footer() {
             Reserved.
           </p>
           <p>
-            Built with <span className="text-[oklch(72%_0.19_42)]">♥</span>
+            Built with <span className="text-[oklch(64%_0.18_42)]">♥</span>
             {" using "}
             <a
               href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
